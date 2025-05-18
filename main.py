@@ -16,7 +16,10 @@ nltk.download('punkt') # Herramienta para dividir texto en palabras
 nltk.download('wordnet') # Herramienta para encontrar sinonomos de palabras en ingles
 
 # Indicamos la ruta donde nltk buscará los datos descartrgados en nuestro computador 
-nltk.data.path.append('C:\Users\andre\AppData\Roaming\nltk_data')
+nltk.data.path.append(r'C:\Users\andre\AppData\Roaming\nltk_data')
 
 # Funcion para cargar las peliculas desde un arvhivo CSV 
+def load_movies():
+    # Leemos el archivo que contiene informacion de peliculas y seleccionamos las columnas mas importantes
+    df = pd.read_csv(r"Dataset/netflix_titles.csv")
 
